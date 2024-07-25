@@ -13,29 +13,23 @@
 			<div class="col-md-6 offset-md-3">
 				<div class="card">
 					<div class="card-header text-center text-white bg-primary">
-						<h1>Login Page</h1>
+						<h1>Add Your Notes</h1>
 					</div>
 					<div class="card-body">
 						<form action="">
 
 							<div class="mb-3">
-								<label>Enter Email</label> <input type="email" name="email"
+								<label>Enter Title</label> <input type="text" name="email"
 									class="form-control">
 							</div>
 
 							<div class="mb-3">
-								<label>Enter Password</label> <input type="password"
-									name="password" class="form-control">
+								<label>Enter Description</label> 
+								<textarea rows="6" cols="10" class="form-control"></textarea>
 							</div>
 
-							<button class="btn btn-primary col-md-12">Register</button>
+							<button class="btn btn-primary col-md-12">Save</button>
 						</form>
-					</div>
-					<div class="card-footer text-center">
-						<p class="fs-6">
-							don't have an account <a href="register"
-								class="text-decoration-none">register</a>
-						</p>
 					</div>
 				</div>
 			</div>
