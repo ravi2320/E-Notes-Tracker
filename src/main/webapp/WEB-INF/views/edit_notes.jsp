@@ -4,7 +4,7 @@
 <html>
 <head>
 <%@include file="/WEB-INF/resources/components/base.jsp"%>
-<title>Add Notes page</title>
+<title>Edit Notes page</title>
 </head>
 <body style="background-color: #f0f0f0;">
 	<%@include file="/WEB-INF/resources/components/navbar.jsp"%>
@@ -13,7 +13,7 @@
 			<div class="col-md-6 offset-md-3">
 				<div class="card">
 					<div class="card-header text-center text-white bg-primary">
-						<h1>Add Your Notes</h1>
+						<h1>Edit Notes</h1>
 					</div>
 					<div class="card-body">
 						<form action="">
