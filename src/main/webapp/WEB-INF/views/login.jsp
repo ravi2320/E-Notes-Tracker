@@ -11,12 +11,20 @@
 	<div class="container mt-5">
 		<div class="row">
 			<div class="col-md-6 offset-md-3">
+				<c:if test="${ not empty msg }">
+					<p class="fs-3 fw-bold text-danger text-center">${ msg }</p>
+					<c:remove var="msg" />
+				</c:if>
+				<c:if test="${ not empty msg1 }">
+					<p class="fs-3 fw-bold text-success text-center">${ msg1 }</p>
+					<c:remove var="msg1" />
+				</c:if>
 				<div class="card">
 					<div class="card-header text-center text-white bg-primary">
 						<h1>Login Page</h1>
 					</div>
 					<div class="card-body">
-						<form action="">
+						<form action="loginUser" method="post">
 
 							<div class="mb-3">
 								<label>Enter Email</label> <input type="email" name="email"
