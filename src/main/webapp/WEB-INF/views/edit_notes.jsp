@@ -16,19 +16,23 @@
 						<h1>Edit Notes</h1>
 					</div>
 					<div class="card-body">
-						<form action="">
-
-							<div class="mb-3">
-								<label>Enter Title</label> <input type="text" name="email"
+						<form action="updateNotes" method="post"></label> 
+								
+							<div class="mb-3"> <label>Enter
+									Title</label> <input type="text" name="title" value="${ notes.title }"
 									class="form-control">
 							</div>
 
 							<div class="mb-3">
-								<label>Enter Description</label> 
-								<textarea rows="6" cols="10" class="form-control"></textarea>
+								<label>Enter Description</label>
+								<textarea rows="6" cols="10" name="description"
+									class="form-control">${ notes.description }</textarea>
 							</div>
 
-							<button class="btn btn-primary col-md-12">Save</button>
+							<input type="hidden" value="${ notes.id }" name="id"
+								class="form-control">
+								
+							<button class="btn btn-primary col-md-12">Update</button>
 						</form>
 					</div>
 				</div>

@@ -58,7 +58,7 @@ public class HomeController {
 		User user = dao.login(email, password);
 		if(user != null) {
 			session.setAttribute("userObj", user);
-			return "redirect:/profile";
+			return "redirect:/user/viewNotes";
 		}
 		
 		session.setAttribute("msg", "Invalid Username and Password...!");

@@ -5,10 +5,14 @@ import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
 import java.util.List;
+
+import javax.servlet.http.HttpSession;
 
 import org.hibernate.query.Query;
 
+import com.mysql.cj.Session;
 import com.springmvc.entity.Notes;
 import com.springmvc.entity.User;
 
@@ -35,8 +39,11 @@ public class UserDaoImpl implements UserDao {
     }
 
 	@Override
-	public int saveNotes(Notes notes) {
+	public int saveNotes(Notes notes, User user) {
+		notes.setUser(user);
+		notes.setDate(LocalDateTime.now().toString());
 		int i = (Integer)hibernateTemplate.save(notes);
+		System.out.println(notes);
 		return i;
 	}
 

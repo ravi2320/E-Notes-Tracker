@@ -11,7 +11,7 @@ public interface UserDao {
 	
 	public User login(String email, String password);
 	
-	public int saveNotes(Notes notes);
+	public int saveNotes(Notes notes, User user);
 	
 	public List<Notes> getNotesByUser(User user);
 	
